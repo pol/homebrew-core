@@ -71,7 +71,7 @@ class SynergyCore < Formula
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
                     "-DBUILD_TESTS:BOOL=OFF", "-DCMAKE_INSTALL_DO_STRIP=1",
-                    "-DSYSTEM_PUGIXML:BOOL=ON"
+                    "-DSYSTEM_PUGIXML:BOOL=ON", "-DSYNERGY_ENTERPRISE=1"
 
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
